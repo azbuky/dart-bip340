@@ -14,7 +14,7 @@ List<int> bigToBytes(BigInt integer) {
   if (hexNum.length % 2 == 1) {
     hexNum = '0' + hexNum;
   }
-  return hex.decode(hexNum);
+  return hex.decode(hexNum.padLeft(64, '0'));
 }
 
 BigInt bigFromBytes(List<int> bytes) {
